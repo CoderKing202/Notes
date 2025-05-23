@@ -1,0 +1,5 @@
+Yes, exactly! Both Expo and React Native CLI are ways to create and run a React Native app, but they approach it in different ways.
+Expo is like a shortcut or simplified path to quickly build and run your app. It gives you a lot of tools and libraries out of the box, so you don’t have to worry about some of the more complex setup. You can get started faster, but you're a bit limited if you need advanced features.
+React Native CLI gives you more flexibility and control. It's the more "raw" approach, where you manage more of the setup and configuration yourself. You can do anything you want, but it takes more time and effort.
+So, both are tools for building and running apps, but Expo makes it easier to get started, and React Native CLI is more powerful for complex or custom needs. Does that clear it up?
+

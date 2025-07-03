@@ -426,7 +426,7 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>B_channels</Name>
+				<Name>A_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -447,7 +447,7 @@
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>B</first>
+					<first>A</first>
 					<second>Read1</second>
 				</item>
 			</Inputs_map>
@@ -540,7 +540,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon 16. Jun 17:43:48 2025</Value>
+			<Value>Mon 16. Jun 18:19:44 2025</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -556,7 +556,7 @@
 		<count>0</count>
 		<item_version>3</item_version>
 	</AdditionalFormats>
-	<Timeline_current_time>32</Timeline_current_time>
+	<Timeline_current_time>23</Timeline_current_time>
 	<CreationDate>1750074403089</CreationDate>
 </Project>
 <ProjectGui class_id="10" tracking_level="0" version="12">
@@ -667,9 +667,9 @@
 		<item class_id="19" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="20" tracking_level="0" version="14">
-				<zoomLeft>-1.71962521136319447e+03</zoomLeft>
-				<zoomBottom>-3.49428216638522883e+02</zoomBottom>
-				<zoomFactor>2.78256345756869472e-01</zoomFactor>
+				<zoomLeft>-4.26722204304362094e+02</zoomLeft>
+				<zoomBottom>-1.36683855162012492e+02</zoomBottom>
+				<zoomFactor>3.33887567536072183e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="21" tracking_level="0" version="0">
 					<Left>4.80000000000000000e+02</Left>

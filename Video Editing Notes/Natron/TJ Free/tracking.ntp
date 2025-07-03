@@ -11,7 +11,7 @@
 	<OS>Windows</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>3</NodesCount>
+		<NodesCount>5</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Viewer1</Plugin_label>
 			<Plugin_script_name>Viewer1</Plugin_script_name>
@@ -403,7 +403,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -426,6 +426,24 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
 				<Name>A_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
@@ -444,14 +462,18 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>1</count>
+				<count>2</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
+					<second>Transform1</second>
+				</item>
+				<item>
+					<first>B</first>
 					<second>Read1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
+			<KnobsAge>2</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -468,8 +490,590 @@
 			</UserComponents>
 			<CacheID>Merge1</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Transform1</Plugin_label>
+			<Plugin_script_name>Transform1</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>translate</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>1</HasAnimation>
+					<Curve class_id="9" tracking_level="0" version="0">
+						<KeyFrameSet class_id="10" tracking_level="0" version="0">
+							<count>27</count>
+							<item_version>0</item_version>
+							<item class_id="11" tracking_level="0" version="0">
+								<Time>9.00000000000000000e+00</Time>
+								<Value>0.00000000000000000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>1.36566913604736328e+02</RightDerivative>
+							</item>
+							<item>
+								<Time>1.00000000000000000e+01</Time>
+								<Value>1.36566913604736328e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>1.04826524734497070e+02</LeftDerivative>
+								<RightDerivative>1.04826524734497070e+02</RightDerivative>
+							</item>
+							<item>
+								<Time>1.10000000000000000e+01</Time>
+								<Value>2.09653049468994141e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>5.61074523925781392e+01</LeftDerivative>
+								<RightDerivative>5.61074523925781392e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.20000000000000000e+01</Time>
+								<Value>2.48781818389892607e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.92862854003906250e+01</LeftDerivative>
+								<RightDerivative>3.92862854003906250e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.30000000000000000e+01</Time>
+								<Value>2.88225620269775391e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.94817123413085795e+01</LeftDerivative>
+								<RightDerivative>3.94817123413085795e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.40000000000000000e+01</Time>
+								<Value>3.27745243072509766e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.93803253173828125e+01</LeftDerivative>
+								<RightDerivative>3.93803253173828125e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.50000000000000000e+01</Time>
+								<Value>3.66986270904541016e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.93157653808593750e+01</LeftDerivative>
+								<RightDerivative>3.93157653808593750e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.60000000000000000e+01</Time>
+								<Value>4.06376773834228516e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.93241577148437500e+01</LeftDerivative>
+								<RightDerivative>3.93241577148437500e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.70000000000000000e+01</Time>
+								<Value>4.45634586334228516e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.93714752197265625e+01</LeftDerivative>
+								<RightDerivative>3.93714752197265625e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.80000000000000000e+01</Time>
+								<Value>4.85119724273681641e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.94366760253906250e+01</LeftDerivative>
+								<RightDerivative>3.94366760253906250e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.90000000000000000e+01</Time>
+								<Value>5.24507938385009766e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.94873199462890625e+01</LeftDerivative>
+								<RightDerivative>3.94873199462890625e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.00000000000000000e+01</Time>
+								<Value>5.64094364166259766e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.96735839843750000e+01</LeftDerivative>
+								<RightDerivative>3.96735839843750000e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.10000000000000000e+01</Time>
+								<Value>6.03855106353759766e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.98613586425781250e+01</LeftDerivative>
+								<RightDerivative>3.98613586425781250e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.20000000000000000e+01</Time>
+								<Value>6.43817081451416016e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.99923095703125000e+01</LeftDerivative>
+								<RightDerivative>3.99923095703125000e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.30000000000000000e+01</Time>
+								<Value>6.83839725494384766e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.02561035156250000e+01</LeftDerivative>
+								<RightDerivative>4.02561035156250000e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.40000000000000000e+01</Time>
+								<Value>7.24329288482666016e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.05687561035156250e+01</LeftDerivative>
+								<RightDerivative>4.05687561035156250e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.50000000000000000e+01</Time>
+								<Value>7.64977237701416016e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.08759155273438068e+01</LeftDerivative>
+								<RightDerivative>4.08759155273438068e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.60000000000000000e+01</Time>
+								<Value>8.06081119537353629e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.11542053222656818e+01</LeftDerivative>
+								<RightDerivative>4.11542053222656818e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.70000000000000000e+01</Time>
+								<Value>8.47285648345947379e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.13513793945311932e+01</LeftDerivative>
+								<RightDerivative>4.13513793945311932e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.80000000000000000e+01</Time>
+								<Value>8.88783878326416016e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.16638183593750000e+01</LeftDerivative>
+								<RightDerivative>4.16638183593750000e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.90000000000000000e+01</Time>
+								<Value>9.30613285064697379e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.21726379394531818e+01</LeftDerivative>
+								<RightDerivative>4.21726379394531818e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.00000000000000000e+01</Time>
+								<Value>9.73129154205322379e+02</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.28089294433593750e+01</LeftDerivative>
+								<RightDerivative>4.28089294433593750e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.10000000000000000e+01</Time>
+								<Value>1.01623114395141613e+03</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.33387451171874432e+01</LeftDerivative>
+								<RightDerivative>4.33387451171874432e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.20000000000000000e+01</Time>
+								<Value>1.05980664443969727e+03</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.40283508300780682e+01</LeftDerivative>
+								<RightDerivative>4.40283508300780682e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.30000000000000000e+01</Time>
+								<Value>1.10428784561157227e+03</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.48489379882812500e+01</LeftDerivative>
+								<RightDerivative>4.48489379882812500e+01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.40000000000000000e+01</Time>
+								<Value>1.14950452041625977e+03</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+							<item>
+								<Time>3.50000000000000000e+01</Time>
+								<Value>1.14950452041625977e+03</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+						</KeyFrameSet>
+					</Curve>
+					<Value>6.43817081451416016e+02</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>1</HasAnimation>
+					<Curve>
+						<KeyFrameSet>
+							<count>27</count>
+							<item_version>0</item_version>
+							<item>
+								<Time>9.00000000000000000e+00</Time>
+								<Value>0.00000000000000000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>-9.87243652343750000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.00000000000000000e+01</Time>
+								<Value>-9.87243652343750000e-01</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-8.38531494140625000e-01</LeftDerivative>
+								<RightDerivative>-8.38531494140625000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.10000000000000000e+01</Time>
+								<Value>-1.67706298828125022e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-4.41970825195312500e-01</LeftDerivative>
+								<RightDerivative>-4.41970825195312500e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.20000000000000000e+01</Time>
+								<Value>-1.87118530273437500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-2.29187011718749889e-01</LeftDerivative>
+								<RightDerivative>-2.29187011718749889e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.30000000000000000e+01</Time>
+								<Value>-2.13543701171875000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-2.02407836914062472e-01</LeftDerivative>
+								<RightDerivative>-2.02407836914062472e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.40000000000000000e+01</Time>
+								<Value>-2.27600097656250000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+							<item>
+								<Time>1.50000000000000000e+01</Time>
+								<Value>-1.70449829101562500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>6.07147216796875000e-01</LeftDerivative>
+								<RightDerivative>6.07147216796875000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.60000000000000000e+01</Time>
+								<Value>-1.06170654296875000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>7.01782226562500000e-01</LeftDerivative>
+								<RightDerivative>7.01782226562500000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.70000000000000000e+01</Time>
+								<Value>-3.00933837890625000e-01</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>8.09020996093750000e-01</LeftDerivative>
+								<RightDerivative>8.09020996093750000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.80000000000000000e+01</Time>
+								<Value>5.56335449218750000e-01</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>7.75482177734374889e-01</LeftDerivative>
+								<RightDerivative>7.75482177734374889e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>1.90000000000000000e+01</Time>
+								<Value>1.25003051757812500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>7.69241333007812500e-01</LeftDerivative>
+								<RightDerivative>7.69241333007812500e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.00000000000000000e+01</Time>
+								<Value>2.09481811523437500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>7.47009277343750000e-01</LeftDerivative>
+								<RightDerivative>7.47009277343750000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.10000000000000000e+01</Time>
+								<Value>2.74404907226562500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.82467651367187500e-01</LeftDerivative>
+								<RightDerivative>4.82467651367187500e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.20000000000000000e+01</Time>
+								<Value>3.05975341796875000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>9.06372070312497224e-03</LeftDerivative>
+								<RightDerivative>9.06372070312500000e-03</RightDerivative>
+							</item>
+							<item>
+								<Time>2.30000000000000000e+01</Time>
+								<Value>3.06277465820312500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>9.06372070312500000e-03</LeftDerivative>
+								<RightDerivative>9.06372070312500000e-03</RightDerivative>
+							</item>
+							<item>
+								<Time>2.40000000000000000e+01</Time>
+								<Value>3.19195556640625044e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+							<item>
+								<Time>2.50000000000000000e+01</Time>
+								<Value>3.09710693359375000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+							<item>
+								<Time>2.60000000000000000e+01</Time>
+								<Value>3.39450073242187500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>2.78060913085937722e-01</LeftDerivative>
+								<RightDerivative>2.78060913085937722e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.70000000000000000e+01</Time>
+								<Value>3.65322875976562544e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>3.86138916015624944e-01</LeftDerivative>
+								<RightDerivative>3.86138916015624944e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.80000000000000000e+01</Time>
+								<Value>4.16677856445312500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>4.66659545898437278e-01</LeftDerivative>
+								<RightDerivative>4.66659545898437278e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>2.90000000000000000e+01</Time>
+								<Value>4.58654785156250000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>2.71789550781250000e-01</LeftDerivative>
+								<RightDerivative>2.71789550781250000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.00000000000000000e+01</Time>
+								<Value>4.71035766601562500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+							<item>
+								<Time>3.10000000000000000e+01</Time>
+								<Value>4.58251953125000000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-1.39587402343750000e-01</LeftDerivative>
+								<RightDerivative>-1.39587402343750000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.20000000000000000e+01</Time>
+								<Value>4.43118286132812500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-3.73382568359375000e-01</LeftDerivative>
+								<RightDerivative>-3.73382568359375000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.30000000000000000e+01</Time>
+								<Value>3.83575439453125000e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>-7.68188476562500000e-01</LeftDerivative>
+								<RightDerivative>-7.68188476562500000e-01</RightDerivative>
+							</item>
+							<item>
+								<Time>3.40000000000000000e+01</Time>
+								<Value>2.89480590820312500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+							<item>
+								<Time>3.50000000000000000e+01</Time>
+								<Value>2.89480590820312500e+00</Value>
+								<InterpolationMethod>2</InterpolationMethod>
+								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
+								<RightDerivative>0.00000000000000000e+00</RightDerivative>
+							</item>
+						</KeyFrameSet>
+					</Curve>
+					<Value>3.05975341796875000e+00</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>transformCenterChanged</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Text1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>4</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Transform1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Text1</Plugin_label>
+			<Plugin_script_name>Text1</Plugin_script_name>
+			<Plugin_id>net.fxarena.openfx.Text</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>6</Plugin_major_version>
+			<Plugin_minor_version>14</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>-6.00000000000000000e+00</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.05000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>text</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>BikerGuy</Value>
+					<Default>Enter text</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>1251</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Text11</CacheID>
+		</item>
 	</NodesCollection>
-	<ProjectKnobsCount>4</ProjectKnobsCount>
+	<ProjectKnobsCount>5</ProjectKnobsCount>
 	<item>
 		<Name>projectPaths</Name>
 		<Type>Path</Type>
@@ -532,6 +1136,23 @@
 		<UserKnob>0</UserKnob>
 	</item>
 	<item>
+		<Name>frameRate</Name>
+		<Type>Double</Type>
+		<Dimension>1</Dimension>
+		<Secret>0</Secret>
+		<MasterIsAlias>0</MasterIsAlias>
+		<item>
+			<Enabled>1</Enabled>
+			<HasAnimation>0</HasAnimation>
+			<Value>3.00010000000000012e+01</Value>
+			<Default>2.40000000000000000e+01</Default>
+			<HasMaster>0</HasMaster>
+			<Expression></Expression>
+			<ExprHasRet>0</ExprHasRet>
+		</item>
+		<UserKnob>0</UserKnob>
+	</item>
+	<item>
 		<Name>lastSaveDate</Name>
 		<Type>String</Type>
 		<Dimension>1</Dimension>
@@ -540,7 +1161,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon 16. Jun 18:19:44 2025</Value>
+			<Value>Wed 18. Jun 17:38:20 2025</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -552,18 +1173,18 @@
 		</StringsAnimation>
 		<UserKnob>0</UserKnob>
 	</item>
-	<AdditionalFormats class_id="9" tracking_level="0" version="0">
+	<AdditionalFormats class_id="12" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>3</item_version>
 	</AdditionalFormats>
-	<Timeline_current_time>23</Timeline_current_time>
+	<Timeline_current_time>22</Timeline_current_time>
 	<CreationDate>1750074403089</CreationDate>
 </Project>
-<ProjectGui class_id="10" tracking_level="0" version="12">
-	<NodesGui class_id="11" tracking_level="0" version="0">
-		<count>3</count>
+<ProjectGui class_id="13" tracking_level="0" version="12">
+	<NodesGui class_id="14" tracking_level="0" version="0">
+		<count>5</count>
 		<item_version>6</item_version>
-		<item class_id="12" tracking_level="0" version="6">
+		<item class_id="15" tracking_level="0" version="6">
 			<Name>Viewer1</Name>
 			<X_position>9.01875000000000000e+02</X_position>
 			<Y_position>4.02500000000000000e+02</Y_position>
@@ -605,12 +1226,40 @@
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Transform1</Name>
+			<X_position>7.90359870358858757e+02</X_position>
+			<Y_position>1.17313400633195158e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>3.10000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Text1</Name>
+			<X_position>7.88054142543899388e+02</X_position>
+			<Y_position>-3.27115833369229847e+01</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>5.000076294e-01</g>
+			<b>2.000000030e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>3.20000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
-	<Gui_Layout class_id="13" tracking_level="0" version="2">
+	<Gui_Layout class_id="16" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
-		<Window class_id="14" tracking_level="0" version="1">
+		<Window class_id="17" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
-			<Child class_id="15" tracking_level="1" version="1" object_id="_0">
+			<Child class_id="18" tracking_level="1" version="1" object_id="_0">
 				<Sizes>1225 659</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
@@ -618,8 +1267,8 @@
 					<Sizes>491 491</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
-					<Child class_id="16" tracking_level="1" version="5" object_id="_2">
-						<Tabs class_id="17" tracking_level="0" version="0">
+					<Child class_id="19" tracking_level="1" version="5" object_id="_2">
+						<Tabs class_id="20" tracking_level="0" version="0">
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>Viewer1</item>
@@ -661,17 +1310,17 @@
 			<h>1009</h>
 		</Window>
 	</Gui_Layout>
-	<ViewersData class_id="18" tracking_level="0" version="0">
+	<ViewersData class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="19" tracking_level="0" version="0">
+		<item class_id="22" tracking_level="0" version="0">
 			<first>Viewer1</first>
-			<second class_id="20" tracking_level="0" version="14">
-				<zoomLeft>-4.26722204304362094e+02</zoomLeft>
-				<zoomBottom>-1.36683855162012492e+02</zoomBottom>
-				<zoomFactor>3.33887567536072183e-01</zoomFactor>
+			<second class_id="23" tracking_level="0" version="14">
+				<zoomLeft>-2.78656220201818883e+02</zoomLeft>
+				<zoomBottom>2.27484965318941192e+02</zoomBottom>
+				<zoomFactor>6.92183004075787922e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
-				<UserRoI class_id="21" tracking_level="0" version="0">
+				<UserRoI class_id="24" tracking_level="0" version="0">
 					<Left>4.80000000000000000e+02</Left>
 					<Bottom>2.70000000000000000e+02</Bottom>
 					<Right>1.44000000000000000e+03</Right>
@@ -713,8 +1362,9 @@
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>3</count>
+		<count>4</count>
 		<item_version>0</item_version>
+		<item>Text1</item>
 		<item>Merge1</item>
 		<item>Read1</item>
 		<item>Natron_Project_Settings_Panel</item>
